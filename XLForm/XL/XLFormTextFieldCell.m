@@ -28,6 +28,7 @@
 #import "XLFormRowDescriptor.h"
 #import "XLForm.h"
 #import "XLFormTextFieldCell.h"
+#import "UIColor_Assets.h"
 
 NSString *const XLFormTextFieldLengthPercentage = @"textFieldLengthPercentage";
 NSString *const XLFormTextFieldMaxNumberOfCharacters = @"textFieldMaxNumberOfCharacters";
@@ -104,6 +105,9 @@ NSString *const XLFormTextFieldMaxNumberOfCharacters = @"textFieldMaxNumberOfCha
     [super update];
     self.textField.delegate = self;
     self.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    self.textLabel.textColor = [UIColor primaryColor];
+    self.textField.textColor = [UIColor primaryColor];
+    
     if ([self.rowDescriptor.rowType isEqualToString:XLFormRowDescriptorTypeText]){
         self.textField.autocorrectionType = UITextAutocorrectionTypeDefault;
         self.textField.autocapitalizationType = UITextAutocapitalizationTypeSentences;

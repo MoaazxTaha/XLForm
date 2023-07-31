@@ -25,6 +25,7 @@
 
 #import "XLFormSliderCell.h"
 #import "UIView+XLFormAdditions.h"
+#import "UIColor_Assets.h"
 
 @interface XLFormSliderCell ()
 
@@ -57,8 +58,10 @@
 	
     [super update];
     self.textLabel.text = self.rowDescriptor.title;
+    self.textLabel.textColor = [UIColor primaryColor];
     self.slider.value = [self.rowDescriptor.value floatValue];
     self.slider.enabled = !self.rowDescriptor.isDisabled;
+    self.slider.minimumTrackTintColor = [UIColor secondaryColor];
     [self valueChanged:nil];
 }
 

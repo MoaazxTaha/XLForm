@@ -28,6 +28,7 @@
 #import "XLFormViewController.h"
 #import "XLFormTextView.h"
 #import "XLFormTextViewCell.h"
+#import "UIColor_Assets.h"
 
 NSString *const XLFormTextViewLengthPercentage = @"textViewLengthPercentage";
 NSString *const XLFormTextViewMaxNumberOfCharacters = @"textViewMaxNumberOfCharacters";
@@ -109,6 +110,8 @@ NSString *const XLFormTextViewMaxNumberOfCharacters = @"textViewMaxNumberOfChara
     [self.textView setEditable:!self.rowDescriptor.isDisabled];
     self.textLabel.text = ((self.rowDescriptor.required && self.rowDescriptor.title && self.rowDescriptor.sectionDescriptor.formDescriptor.addAsteriskToRequiredRowsTitle) ? [NSString stringWithFormat:@"%@*", self.rowDescriptor.title]: self.rowDescriptor.title);
     self.textView.backgroundColor = self.textLabel.backgroundColor;
+    self.textView.textColor = [UIColor primaryColor];
+    self.textLabel.textColor = [UIColor primaryColor];
     
     UIColor * textColor = nil;
     UIColor * disabledTextColor = nil;

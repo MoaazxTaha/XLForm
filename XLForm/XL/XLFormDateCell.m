@@ -27,6 +27,7 @@
 #import "XLForm.h"
 #import "XLFormRowDescriptor.h"
 #import "XLFormDateCell.h"
+#import "UIColor_Assets.h"
 
 @interface XLFormDateCell()
 
@@ -121,9 +122,11 @@
     self.accessoryType =  UITableViewCellAccessoryNone;
     self.editingAccessoryType =  UITableViewCellAccessoryNone;
     [self.textLabel setText:self.rowDescriptor.title];
+    self.textLabel.textColor = [UIColor primaryColor];
     self.selectionStyle = self.rowDescriptor.isDisabled ? UITableViewCellSelectionStyleNone : UITableViewCellSelectionStyleDefault;
     self.textLabel.text = [NSString stringWithFormat:@"%@%@", self.rowDescriptor.title, self.rowDescriptor.required && self.rowDescriptor.sectionDescriptor.formDescriptor.addAsteriskToRequiredRowsTitle ? @"*" : @""];
     self.detailTextLabel.text = [self valueDisplayText];
+    self.detailTextLabel.textColor = [UIColor primaryColor];
 }
 
 -(void)formDescriptorCellDidSelectedWithFormController:(XLFormViewController *)controller

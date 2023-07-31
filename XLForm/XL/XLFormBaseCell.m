@@ -24,7 +24,7 @@
 // THE SOFTWARE.
 
 #import "XLFormBaseCell.h"
-
+#import "UIColor_Assets.h"
 @implementation XLFormBaseCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -51,11 +51,11 @@
     self.textLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
     self.detailTextLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
 
-    UIColor * textColor = nil;
+    UIColor * textColor = [UIColor primaryColor];
     UIColor * disabledTextColor = nil;
     
     if (@available(iOS 13.0, *)) {
-        textColor = [UIColor labelColor];
+        textColor = [UIColor primaryColor];
         disabledTextColor = [UIColor systemGray3Color];
     }
     
@@ -65,8 +65,8 @@
     }
 
     else {
-        textColor = [UIColor blackColor];
-        disabledTextColor = [UIColor grayColor];
+        textColor = [UIColor primaryColor];
+        disabledTextColor = [UIColor primaryColor];
     }
     
     

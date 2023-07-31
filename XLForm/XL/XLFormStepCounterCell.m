@@ -27,6 +27,7 @@
 #import "XLFormStepCounterCell.h"
 #import "XLFormRowDescriptor.h"
 #import "UIView+XLFormAdditions.h"
+#import "UIColor_Assets.h"
 
 @interface XLFormStepCounterCell ()
 
@@ -68,6 +69,7 @@
 {
     [super update];
     self.textLabel.text = self.rowDescriptor.title;
+    self.textLabel.textColor = [UIColor primaryColor];
     self.stepControl.value = [self.rowDescriptor.value doubleValue];
     self.currentStepValue.text = self.rowDescriptor.value ? [NSString stringWithFormat:@"%@", self.rowDescriptor.value] : nil;
     [self stepControl].enabled = !self.rowDescriptor.isDisabled;

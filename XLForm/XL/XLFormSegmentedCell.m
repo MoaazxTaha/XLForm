@@ -27,6 +27,7 @@
 
 #import "NSObject+XLFormAdditions.h"
 #import "UIView+XLFormAdditions.h"
+#import "UIColor_Assets.h"
 
 @interface XLFormSegmentedCell()
 
@@ -55,6 +56,7 @@
 {
     [super update];
     self.textLabel.text = [NSString stringWithFormat:@"%@%@", self.rowDescriptor.title, self.rowDescriptor.required && self.rowDescriptor.sectionDescriptor.formDescriptor.addAsteriskToRequiredRowsTitle ? @"*" : @""];
+    self.textLabel.textColor = [UIColor primaryColor];
     [self updateSegmentedControl];
     self.segmentedControl.selectedSegmentIndex = [self selectedIndex];
     self.segmentedControl.enabled = !self.rowDescriptor.isDisabled;

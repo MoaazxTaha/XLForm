@@ -27,7 +27,7 @@
 #import "XLFormRightImageButton.h"
 #import "NSObject+XLFormAdditions.h"
 #import "XLFormLeftRightSelectorCell.h"
-
+#import "UIColor_Assets.h"
 @implementation XLFormLeftRightSelectorCell
 {
     UITextField * _constraintTextField;
@@ -49,7 +49,6 @@
     [imageView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [_leftButton addSubview:imageView];
     [_leftButton addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[image(8)]|" options:0 metrics:0 views:@{@"image": imageView}]];
-    
     UIView * separatorTop = [UIView autolayoutView];
     UIView * separatorBottom = [UIView autolayoutView];
     [_leftButton addSubview:separatorTop];
@@ -135,6 +134,10 @@
     self.accessoryView = self.rowDescriptor.isDisabled ? nil : [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"XLForm.bundle/forwardarrow.png"]];
     self.editingAccessoryView = self.accessoryView;
     self.selectionStyle = self.rowDescriptor.isDisabled ? UITableViewCellSelectionStyleNone : UITableViewCellSelectionStyleDefault;
+    self.rightLabel.textColor = [UIColor primaryColor];
+    self.leftButton.tintColor = [UIColor secondaryColor];
+    _constraintTextField.textColor = [UIColor primaryColor];
+
 }
 
 

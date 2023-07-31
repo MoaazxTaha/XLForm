@@ -85,6 +85,9 @@
 		E267FDC51BE804E200F86B42 /* XLForm.h in Headers */ = {isa = PBXBuildFile; fileRef = E267FD7A1BE804E200F86B42 /* XLForm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E267FDC61BE804E200F86B42 /* XLForm.m in Sources */ = {isa = PBXBuildFile; fileRef = E267FD7B1BE804E200F86B42 /* XLForm.m */; };
 		E267FDC81BE806D000F86B42 /* XLForm.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E267FDC71BE806D000F86B42 /* XLForm.bundle */; };
+		EDC589BF2A77F87100248EA1 /* Colours.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDC589BE2A77F87100248EA1 /* Colours.xcassets */; };
+		EDC589C62A77FCAC00248EA1 /* UIColor_Assets.h in Headers */ = {isa = PBXBuildFile; fileRef = EDC589C42A77FCAC00248EA1 /* UIColor_Assets.h */; };
+		EDC589C72A77FCAC00248EA1 /* UIColor_Assets.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC589C52A77FCAC00248EA1 /* UIColor_Assets.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -168,6 +171,9 @@
 		E267FD7A1BE804E200F86B42 /* XLForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XLForm.h; path = XL/XLForm.h; sourceTree = "<group>"; };
 		E267FD7B1BE804E200F86B42 /* XLForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XLForm.m; path = XL/XLForm.m; sourceTree = "<group>"; };
 		E267FDC71BE806D000F86B42 /* XLForm.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = XLForm.bundle; sourceTree = "<group>"; };
+		EDC589BE2A77F87100248EA1 /* Colours.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colours.xcassets; sourceTree = "<group>"; };
+		EDC589C42A77FCAC00248EA1 /* UIColor_Assets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIColor_Assets.h; sourceTree = "<group>"; };
+		EDC589C52A77FCAC00248EA1 /* UIColor_Assets.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIColor_Assets.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +206,7 @@
 		E267FD221BE8048900F86B42 /* XLForm */ = {
 			isa = PBXGroup;
 			children = (
+				EDC589BD2A77F85A00248EA1 /* Resources */,
 				E267FD2B1BE804E200F86B42 /* Cell */,
 				E267FD4C1BE804E200F86B42 /* Controllers */,
 				E267FD541BE804E200F86B42 /* Descriptors */,
@@ -298,6 +305,8 @@
 				9C2695702513D0510059594E /* UIView+XLFormAdditions.h */,
 				9C26956C2513D0510059594E /* UIView+XLFormAdditions.m */,
 				E267FD691BE804E200F86B42 /* Views */,
+				EDC589C42A77FCAC00248EA1 /* UIColor_Assets.h */,
+				EDC589C52A77FCAC00248EA1 /* UIColor_Assets.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -331,6 +340,14 @@
 			name = Validation;
 			sourceTree = "<group>";
 		};
+		EDC589BD2A77F85A00248EA1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EDC589BE2A77F87100248EA1 /* Colours.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -341,6 +358,7 @@
 				9C2695202513CEFF0059594E /* XLFormCheckCell.h in Headers */,
 				9C26952A2513CEFF0059594E /* XLFormDateCell.h in Headers */,
 				9C2695602513D0230059594E /* XLFormDescriptorDelegate.h in Headers */,
+				EDC589C62A77FCAC00248EA1 /* UIColor_Assets.h in Headers */,
 				9C2695962513D0D00059594E /* XLFormValidationStatus.h in Headers */,
 				9C2695562513CFF50059594E /* XLFormOptionsViewController.h in Headers */,
 				9C2695522513CFF50059594E /* XLFormViewController.h in Headers */,
@@ -441,6 +459,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDC589BF2A77F87100248EA1 /* Colours.xcassets in Resources */,
 				E267FDC81BE806D000F86B42 /* XLForm.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,6 +499,7 @@
 				9C26953B2513CFA70059594E /* XLFormStepCounterCell.m in Sources */,
 				9C2695532513CFF50059594E /* XLFormViewController.m in Sources */,
 				9C26951A2513CEFF0059594E /* XLFormCheckCell.m in Sources */,
+				EDC589C72A77FCAC00248EA1 /* UIColor_Assets.m in Sources */,
 				9C2695292513CEFF0059594E /* XLFormImageCell.m in Sources */,
 				9C2695272513CEFF0059594E /* XLFormBaseCell.m in Sources */,
 				9C2695252513CEFF0059594E /* XLFormDateCell.m in Sources */,

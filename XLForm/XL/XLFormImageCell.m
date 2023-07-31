@@ -26,6 +26,7 @@
 #import "XLFormImageCell.h"
 #import "XLFormRowDescriptor.h"
 #import "UIView+XLFormAdditions.h"
+#import "UIColor_Assets.h"
 
 @interface XLFormImageCell() <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 {
@@ -55,7 +56,9 @@
 {
     [super update];
     self.textLabel.text = self.rowDescriptor.title;
+    self.textLabel.textColor = [UIColor primaryColor];
     self.imageView.image = self.rowDescriptor.value;
+    self.imageView.tintColor = [UIColor primaryColor];
 }
 
 - (void)chooseImage:(UIImage *)image

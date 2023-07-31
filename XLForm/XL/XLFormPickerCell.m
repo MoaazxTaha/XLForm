@@ -25,6 +25,7 @@
 
 #import "UIView+XLFormAdditions.h"
 #import "XLFormPickerCell.h"
+#import "UIColor_Assets.h"
 
 @interface XLFormPickerCell() <UIPickerViewDelegate, UIPickerViewDataSource>
 
@@ -81,6 +82,7 @@
     self.contentView.alpha = isDisable ? 0.5 : 1.0;
     [self.pickerView selectRow:[self selectedIndex] inComponent:0 animated:NO];
     [self.pickerView reloadAllComponents];
+    self.pickerView.tintColor = [UIColor primaryColor];
     
 }
 

@@ -28,6 +28,7 @@
 #import "XLFormRowDescriptor.h"
 #import "XLFormSelectorCell.h"
 #import "NSArray+XLFormAdditions.h"
+#import "UIColor_Assets.h"
 
 @interface XLFormSelectorCell() <UIPickerViewDelegate, UIPickerViewDataSource, UIPopoverPresentationControllerDelegate>
 
@@ -142,6 +143,7 @@
     self.editingAccessoryType = self.accessoryType;
     self.selectionStyle = self.rowDescriptor.isDisabled || [self.rowDescriptor.rowType isEqualToString:XLFormRowDescriptorTypeInfo] ? UITableViewCellSelectionStyleNone : UITableViewCellSelectionStyleDefault;
     self.textLabel.text = [NSString stringWithFormat:@"%@%@", self.rowDescriptor.title, self.rowDescriptor.required && self.rowDescriptor.sectionDescriptor.formDescriptor.addAsteriskToRequiredRowsTitle ? @"*" : @""];
+    self.textLabel.textColor = [UIColor primaryColor];
     self.detailTextLabel.text = [self valueDisplayText];
 }
 

@@ -24,6 +24,7 @@
 // THE SOFTWARE.
 
 #import "XLFormCheckCell.h"
+#import "UIColor_Assets.h"
 
 @implementation XLFormCheckCell
 
@@ -40,6 +41,7 @@
 {
     [super update];
     self.textLabel.text = self.rowDescriptor.title;
+    self.textLabel.textColor = [UIColor primaryColor];
     self.accessoryType = [self.rowDescriptor.value boolValue] ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
     self.editingAccessoryType =  self.accessoryType;
     CGFloat red, green, blue, alpha;

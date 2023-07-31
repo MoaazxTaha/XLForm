@@ -24,7 +24,7 @@
 // THE SOFTWARE.
 
 #import "XLFormRowDescriptor.h"
-
+#import "UIColor_Assets.h"
 #import "XLFormSwitchCell.h"
 
 @implementation XLFormSwitchCell
@@ -44,6 +44,7 @@
 {
     [super update];
     self.textLabel.text = self.rowDescriptor.title;
+    self.textLabel.text = [UIColor primaryColor];
     self.switchControl.on = [self.rowDescriptor.value boolValue];
     self.switchControl.enabled = !self.rowDescriptor.isDisabled;
 }

@@ -25,7 +25,7 @@
 
 #import "XLFormRowDescriptor.h"
 #import "XLFormButtonCell.h"
-
+#import "UIColor_Assets.h"
 @interface XLFormButtonCell ()
 
 @property(nonatomic) BOOL useTintColor;
@@ -61,7 +61,7 @@
     self.accessoryType = simpleAction || isDisabled ? UITableViewCellAccessoryNone : UITableViewCellAccessoryDisclosureIndicator;
     self.editingAccessoryType = self.accessoryType;
     self.selectionStyle = isDisabled ? UITableViewCellSelectionStyleNone : UITableViewCellSelectionStyleDefault;
-    
+    self.tintColor = [UIColor secondaryColor];
     if (simpleAction && _useTintColor){
         CGFloat red, green, blue, alpha;
         [self.tintColor getRed:&red green:&green blue:&blue alpha:&alpha];
