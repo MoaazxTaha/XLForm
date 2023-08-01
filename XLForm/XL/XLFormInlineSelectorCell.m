@@ -25,6 +25,7 @@
 
 #import "XLForm.h"
 #import "XLFormInlineSelectorCell.h"
+#import "UIColor_Assets.h"
 
 @interface XLFormInlineSelectorCell()
 

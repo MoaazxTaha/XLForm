@@ -14,4 +14,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.ios.frameworks = 'UIKit', 'Foundation', 'CoreGraphics'
   s.resource = 'XLForm/XLForm.bundle'
+  s.resource_bundles = { 'MyPodResources' => ['XLForm/*.Colors'] }
 end
